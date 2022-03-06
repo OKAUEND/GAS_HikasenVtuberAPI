@@ -1,10 +1,10 @@
-function myFunction() {
-  const test = SpreadsheetApp.getActiveSheet();
-  const Row = 2;
-  const value = test.getRange(`A${Row}:D${Row}`).getValues();
-  console.log(value);
+function main() {
+  const sheet = SpreadsheetApp.getActiveSheet();
+  const range = sheet.getDataRange();
+  const rangeValue = range.getValues();
+  Logger.log(rangeValue);
 
-  return response(value);
+  return response(rangeValue);
 }
 
 const response = (content) => {
