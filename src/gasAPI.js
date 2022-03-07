@@ -5,9 +5,9 @@ function main() {
 
   const result = filterEnable(rangeValue);
 
-  const HikasenVtuber = createHikasenVtuber(result);
+  const hikasenVtuber = createHikasenVtuber(result);
 
-  Logger.log(HikasenVtuber);
+  Logger.log(hikasenVtuber);
 
   return response(result);
 }
