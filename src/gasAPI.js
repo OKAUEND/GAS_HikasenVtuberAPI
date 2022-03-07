@@ -20,3 +20,21 @@ const response = (content) => {
 const filterEnable = (list) => {
   return list.filter((vtuber) => vtuber[1] === 1);
 };
+
+const createHikasenVtuber = (sheetValue) => {
+  sheetValue.map((value) => {
+    const FFXIV = {
+      DataCenter: value[3],
+      Server: value[4],
+    };
+
+    return {
+      channelID: value[0],
+      name: value[1],
+      channelIconID: "",
+      twitter: "",
+      twitch: "",
+      FFXIV: FFXIV,
+    };
+  });
+};
