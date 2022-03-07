@@ -24,19 +24,19 @@ const filterEnable = (list) => {
 };
 
 const createHikasenVtuber = (sheetValue) => {
-  sheetValue.map((value) => {
-    const FFXIV = {
-      DataCenter: value[3],
-      Server: value[4],
+  return sheetValue.map((value) => {
+    const ffxiv = {
+      datacenter: value[3],
+      server: value[4],
     };
 
     return {
       channelID: value[0],
-      name: value[1],
+      name: value[2],
       channelIconID: "",
       twitter: "",
       twitch: "",
-      FFXIV: FFXIV,
+      ffxiv: ffxiv,
     };
   });
 };
